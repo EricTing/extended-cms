@@ -1,21 +1,28 @@
-# eXtended CMS
+- [eXtended CMS](#sec-1)
+- [Installation](#sec-2)
+- [Test](#sec-3)
+- [Usage](#sec-4)
+
+# eXtended CMS<a id="orgheadline1"></a>
 
 calculated extended contact mode score provided the query and template protein-ligand structures
 
+# TODO Installation<a id="orgheadline2"></a>
 
-# Installation
+# Test<a id="orgheadline3"></a>
 
-If you don't use `pipsi`, you're missing out.
-Here are [installation instructions](https://github.com/mitsuhiko/pipsi#readme).
+In command line, go to the uncharived xcms directory, in most cases it would be `extended-cms`.
+Then follow the commands below:
 
-Simply run:
+```sh
+cd ./tests/
+py.test ./tests/test_cli.py
+```
 
-    $ pipsi install .
-
-
-# Usage
+# Usage<a id="orgheadline4"></a>
 
 To use it:
 
-    $ x-cms --help
-
+```sh
+x-cms --help
+```

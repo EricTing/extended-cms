@@ -3,7 +3,7 @@ calculated extended contact mode score provided the query and template protein-l
 """
 from setuptools import find_packages, setup
 
-dependencies = ['click']
+dependencies = ['click', 'pytest', 'scipy', 'numpy', 'subprocess32']
 
 setup(
     name='xcms',
@@ -14,7 +14,7 @@ setup(
     author_email='yding8@lsu.edu',
     description='calculated extended contact mode score provided the query and template protein-ligand structures',
     long_description=__doc__,
-    packages=find_packages(exclude=['tests']),
+    packages=find_packages(exclude=[]),
     include_package_data=True,
     zip_safe=False,
     platforms='any',
@@ -27,9 +27,9 @@ setup(
     classifiers=[
         # As from http://pypi.python.org/pypi?%3Aaction=list_classifiers
         # 'Development Status :: 1 - Planning',
-        # 'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 2 - Pre-Alpha',
         # 'Development Status :: 3 - Alpha',
-        'Development Status :: 4 - Beta',
+        # 'Development Status :: 4 - Beta',
         # 'Development Status :: 5 - Production/Stable',
         # 'Development Status :: 6 - Mature',
         # 'Development Status :: 7 - Inactive',
