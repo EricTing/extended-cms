@@ -7,9 +7,9 @@ dependencies = ['click', 'pytest', 'scipy', 'numpy', 'subprocess32']
 
 setup(
     name='xcms',
-    version='0.1.0',
+    version='0.1.2',
     url='https://github.com/EricTing/extended-cms',
-    license='BSD',
+    license='GPLv3+',
     author='Yun Ding',
     author_email='yding8@lsu.edu',
     description='calculated extended contact mode score provided the query and template protein-ligand structures',
@@ -17,7 +17,7 @@ setup(
     packages=find_packages(exclude=[]),
     include_package_data=True,
     zip_safe=False,
-    platforms='any',
+    platforms='Unix-like',
     install_requires=dependencies,
     entry_points={
         'console_scripts': [

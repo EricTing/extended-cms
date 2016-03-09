@@ -7,7 +7,19 @@
 
 calculated extended contact mode score provided the query and template protein-ligand structures
 
-# TODO Installation<a id="orgheadline2"></a>
+# Installation<a id="orgheadline2"></a>
+
+The easiest way is to use `pip`.
+
+```sh
+pip install xcms
+```
+
+To install locally
+
+```sh
+pip install xcms --user
+```
 
 # Test<a id="orgheadline3"></a>
 
