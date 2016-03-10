@@ -20,47 +20,78 @@
 
     <section class="main-content">
       <ul>
-<li><a href="#sec-1">eXtended CMS</a></li>
-<li><a href="#sec-2">Installation</a></li>
-<li><a href="#sec-3">Test</a></li>
+<li><a href="#sec-1">eXtended Contact Mode Score</a></li>
+<li>
+<a href="#sec-2">Requirements</a>
+
+<ul>
+<li><a href="#sec-2-1">OpenBabel and Pybel</a></li>
+<li><a href="#sec-2-2">Pkcombu</a></li>
+<li><a href="#sec-2-3">APoc</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">Installation</a></li>
 <li><a href="#sec-4">Usage</a></li>
 </ul>
 
 <h1>
-<a id="extended-cms" class="anchor" href="#extended-cms" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>eXtended CMS<a id="orgheadline1"></a>
+<a id="extended-contact-mode-score" class="anchor" href="#extended-contact-mode-score" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>eXtended Contact Mode Score<a id="orgheadline1"></a>
 </h1>
 
-<p>calculated extended contact mode score provided the query and template protein-ligand structures</p>
+<p>eXtended Contact Mode Score (XCMS) is a novel measure that reliably assess the similarity between two protein-ligand binding conformations.</p>
+
+<p>The design of XCMS allows for comparison even between two non-identical systems,
+which makes it more flexible and adaptable compared with traditional methods, such as <a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">RMSD</a>.</p>
 
 <h1>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation<a id="orgheadline2"></a>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements<a id="orgheadline5"></a>
 </h1>
 
-<p>The easiest way is to use <code>pip</code>.</p>
+<h2>
+<a id="openbabel-and-pybel" class="anchor" href="#openbabel-and-pybel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OpenBabel and Pybel<a id="orgheadline2"></a>
+</h2>
 
-<div class="highlight highlight-source-shell"><pre>pip install xcms</pre></div>
+<p>We use <a href="http://openbabel.org/wiki/Main_Page">OpenBabel</a> and its python binding <a href="https://openbabel.org/docs/dev/UseTheLibrary/Python_Pybel.html">pybel</a> to handle various input formats.</p>
+
+<p>See <a href="https://openbabel.org/docs/dev/Installation/install.html#compiling-open-babel">here</a> for the instructions how you can compile OpenBabel together with its python binding.</p>
+
+<p>As the instructions require, you must use the old <a href="http://eigen.tuxfamily.org/index.php?title=Eigen2">Eigen2 </a>instead of Eigen3.</p>
+
+<h2>
+<a id="pkcombu" class="anchor" href="#pkcombu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pkcombu<a id="orgheadline3"></a>
+</h2>
+
+<p>We use <a href="http://strcomp.protein.osaka-u.ac.jp/kcombu/doc/README_pkcombu.html">pkcombu</a> in the KCOMBU package to compare two ligands.</p>
+
+<p>You may download the KCOMBU program <a href="http://strcomp.protein.osaka-u.ac.jp/kcombu/download_src.html">here</a>.</p>
+
+<h2>
+<a id="apoc" class="anchor" href="#apoc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>APoc<a id="orgheadline4"></a>
+</h2>
+
+<p>We use Apoc to compare two binding pockets.</p>
+
+<p>You may donwload Apoc program <a href="http://cssb.biology.gatech.edu/APoc">here</a>.</p>
+
+<h1>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation<a id="orgheadline6"></a>
+</h1>
+
+<p>If all the requirements are met, then the easiest way to install xcms is to use <code>pip</code>.</p>
+
+<div class="highlight highlight-source-shell"><pre>$ pip install xcms</pre></div>
 
 <p>To install locally</p>
 
-<div class="highlight highlight-source-shell"><pre>pip install xcms --user</pre></div>
+<div class="highlight highlight-source-shell"><pre>$ pip install xcms --user</pre></div>
 
 <h1>
-<a id="test" class="anchor" href="#test" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test<a id="orgheadline3"></a>
-</h1>
-
-<p>In command line, go to the uncharived xcms directory, in most cases it would be <code>extended-cms</code>.
-Then follow the commands below:</p>
-
-<div class="highlight highlight-source-shell"><pre><span class="pl-c1">cd</span> ./tests/
-py.<span class="pl-c1">test</span> ./tests/test_cli.py</pre></div>
-
-<h1>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage<a id="orgheadline4"></a>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage<a id="orgheadline7"></a>
 </h1>
 
 <p>To use it:</p>
 
-<div class="highlight highlight-source-shell"><pre>x-cms --help</pre></div>
+<div class="highlight highlight-source-shell"><pre>$ x-cms --help</pre></div>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/EricTing/extended-cms">Extended-cms</a> is maintained by <a href="https://github.com/EricTing">EricTing</a>.</span>
