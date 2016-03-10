@@ -16,9 +16,9 @@ non-identical systems using **eXtended Contact Mode Score (XCMS)**
 
 ## Python 2.7 and pip<a id="orgheadline2"></a>
 
-It is recommended to install [Anaconda](https://www.continuum.io/downloads) on your system, which includes most of the
-python dependencies to run XCMS, except for Pybel, whose installation shall be
-explained below.
+It is recommended to install [Anaconda](https://www.continuum.io/downloads) on your system to set up the python
+working environment, which provides most of the python dependencies to run XCMS,
+except for Pybel, whose installation shall be explained below.
 
 ## OpenBabel and Pybel<a id="orgheadline3"></a>
 
@@ -35,11 +35,15 @@ We use [pkcombu](http://strcomp.protein.osaka-u.ac.jp/kcombu/doc/README_pkcombu.
 
 You may download the KCOMBU program [here](http://strcomp.protein.osaka-u.ac.jp/kcombu/download_src.html).
 
+Please add the `pkcombu` into your system's `PATH` variable.
+
 ## APoc<a id="orgheadline5"></a>
 
 We use Apoc to compare two binding pockets.
 
 You may donwload Apoc program [here](http://cssb.biology.gatech.edu/APoc).
+
+Please add the `apoc` into your system's `PATH` variable.
 
 # Installation<a id="orgheadline7"></a>
 

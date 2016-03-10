@@ -15,13 +15,15 @@ from parsers import ApocResultParer
 
 def squared_distance(coordsA, coordsB):
     """Find the squared distance between two 3-tuples"""
-    sqrdist = sum((a-b)**2 for a, b in zip(coordsA, coordsB))
+    sqrdist = sum((a - b)**2 for a, b in zip(coordsA, coordsB))
     return sqrdist
 
+
 def contactVector(lig_coords, prt_coords):
-    vec = [math.sqrt(squared_distance(c1, c2)) for c1 in lig_coords
-           for c2 in prt_coords]
+    vec = [math.sqrt(squared_distance(c1, c2))
+           for c1 in lig_coords for c2 in prt_coords]
     return vec
+
 
 def readLigandCoords(path, mlist, format="sdf"):
     mol = pybel.readfile(format, path).next()
@@ -76,7 +78,8 @@ class ApocInput:
         elif type(self.lig_path) is pybel.Molecule:
             lig = self.lig_path
         else:
-            raise Exception("Wrong input for ligand")
+            raise Exception("Wrong input for ligand! Please check %s" %
+                            self.lig_path)
 
         pkt_lines = []
         residues = set()
@@ -134,7 +137,7 @@ class BioLipReferencedSpearmanR:
                             z = float(line[46:54])
                             res_coords[residue_id] = np.array((x, y, z), "f")
                         except Exception as detail:
-                            raise(detail)
+                            raise (detail)
             return res_coords
 
         def align(pc1, pc2, res1, res2):
@@ -249,4 +252,3 @@ class BioLipReferencedSpearmanR:
         os.remove(ref_pkt_path)
 
         return my_result
-
