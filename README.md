@@ -71,9 +71,9 @@ calculated extended contact mode score provided the query and template
 protein-ligand structures
 
 Options:
-  --template-protein TEXT  template protein file path, in PDB format
-  --query-protein TEXT     query protein file path, in PDB format
-  --query-ligand TEXT      query ligand file path, in SDF format
-  --template-ligand TEXT   template ligand file path, in SDF format
+  --template-protein PATH  template protein file path, in PDB format
+  --query-protein PATH     query protein file path, in PDB format
+  --query-ligand PATH      query ligand file path, in SDF format
+  --template-ligand PATH   template ligand file path, in SDF format
   --help                   Show this message and exit.
 ```
