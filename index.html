@@ -39,12 +39,13 @@
           <ul>
 <li><a href="#sec-1">eXtended Contact Mode Score</a></li>
 <li>
-<a href="#sec-2">Requirements</a>
+<a href="#sec-2">Installation Dependencies</a>
 
 <ul>
-<li><a href="#sec-2-1">OpenBabel and Pybel</a></li>
-<li><a href="#sec-2-2">Pkcombu</a></li>
-<li><a href="#sec-2-3">APoc</a></li>
+<li><a href="#sec-2-1">Python 2.7 and pip</a></li>
+<li><a href="#sec-2-2">OpenBabel and Pybel</a></li>
+<li><a href="#sec-2-3">Pkcombu</a></li>
+<li><a href="#sec-2-4">APoc</a></li>
 </ul>
 </li>
 <li><a href="#sec-3">Installation</a></li>
@@ -55,27 +56,34 @@
 <a id="extended-contact-mode-score" class="anchor" href="#extended-contact-mode-score" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>eXtended Contact Mode Score<a id="orgheadline1"></a>
 </h1>
 
-<p>eXtended Contact Mode Score (XCMS) is a novel measure that reliably assess the similarity between two protein-ligand binding conformations.</p>
-
-<p>The design of XCMS allows for comparison even between two non-identical systems,
-which makes it more flexible and adaptable compared with traditional methods, such as <a href="https://en.wikipedia.org/wiki/Root-mean-square_deviation">RMSD</a>.</p>
+<p>Compare two protein-ligand binding conformations even when they are
+non-identical systems using <strong>eXtended Contact Mode Score (XCMS)</strong></p>
 
 <h1>
-<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements<a id="orgheadline5"></a>
+<a id="installation-dependencies" class="anchor" href="#installation-dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation Dependencies<a id="orgheadline6"></a>
 </h1>
 
 <h2>
-<a id="openbabel-and-pybel" class="anchor" href="#openbabel-and-pybel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OpenBabel and Pybel<a id="orgheadline2"></a>
+<a id="python-27-and-pip" class="anchor" href="#python-27-and-pip" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Python 2.7 and pip<a id="orgheadline2"></a>
+</h2>
+
+<p>It is recommended to install <a href="https://www.continuum.io/downloads">Anaconda</a> on your system, which includes most of the
+python dependencies to run XCMS, except for Pybel, whose installation shall be
+explained below.</p>
+
+<h2>
+<a id="openbabel-and-pybel" class="anchor" href="#openbabel-and-pybel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>OpenBabel and Pybel<a id="orgheadline3"></a>
 </h2>
 
 <p>We use <a href="http://openbabel.org/wiki/Main_Page">OpenBabel</a> and its python binding <a href="https://openbabel.org/docs/dev/UseTheLibrary/Python_Pybel.html">pybel</a> to handle various input formats.</p>
 
-<p>See <a href="https://openbabel.org/docs/dev/Installation/install.html#compiling-open-babel">here</a> for the instructions how you can compile OpenBabel together with its python binding.</p>
+<p>See <a href="https://openbabel.org/docs/dev/Installation/install.html#compiling-open-babel">here</a> for the instructions how you can compile OpenBabel together with its
+python binding.</p>
 
-<p>As the instructions require, you must use the old <a href="http://eigen.tuxfamily.org/index.php?title=Eigen2">Eigen2 </a>instead of Eigen3.</p>
+<p>Be aware, you must use the old <a href="http://eigen.tuxfamily.org/index.php?title=Eigen2">Eigen2 </a>instead of Eigen3.</p>
 
 <h2>
-<a id="pkcombu" class="anchor" href="#pkcombu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pkcombu<a id="orgheadline3"></a>
+<a id="pkcombu" class="anchor" href="#pkcombu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Pkcombu<a id="orgheadline4"></a>
 </h2>
 
 <p>We use <a href="http://strcomp.protein.osaka-u.ac.jp/kcombu/doc/README_pkcombu.html">pkcombu</a> in the KCOMBU package to compare two ligands.</p>
@@ -83,7 +91,7 @@ which makes it more flexible and adaptable compared with traditional methods, su
 <p>You may download the KCOMBU program <a href="http://strcomp.protein.osaka-u.ac.jp/kcombu/download_src.html">here</a>.</p>
 
 <h2>
-<a id="apoc" class="anchor" href="#apoc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>APoc<a id="orgheadline4"></a>
+<a id="apoc" class="anchor" href="#apoc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>APoc<a id="orgheadline5"></a>
 </h2>
 
 <p>We use Apoc to compare two binding pockets.</p>
@@ -91,24 +99,35 @@ which makes it more flexible and adaptable compared with traditional methods, su
 <p>You may donwload Apoc program <a href="http://cssb.biology.gatech.edu/APoc">here</a>.</p>
 
 <h1>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation<a id="orgheadline6"></a>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation<a id="orgheadline7"></a>
 </h1>
 
-<p>If all the requirements are met, then the easiest way to install xcms is to use <code>pip</code>.</p>
+<p>At the command line:</p>
 
 <div class="highlight highlight-source-shell"><pre>$ pip install xcms</pre></div>
 
-<p>To install locally</p>
+<p>To install locally only for yourself:</p>
 
 <div class="highlight highlight-source-shell"><pre>$ pip install xcms --user</pre></div>
 
 <h1>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage<a id="orgheadline7"></a>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage<a id="orgheadline8"></a>
 </h1>
 
 <p>To use it:</p>
 
-<div class="highlight highlight-source-shell"><pre>$ x-cms --help</pre></div>
+<div class="highlight highlight-source-shell"><pre>$ x-cms --help
+Usage: x-cms [OPTIONS]
+
+calculated extended contact mode score provided the query and template
+protein-ligand structures
+
+Options:
+  --template-protein TEXT  template protein file path, <span class="pl-k">in</span> PDB format
+  --query-protein TEXT     query protein file path, <span class="pl-k">in</span> PDB format
+  --query-ligand TEXT      query ligand file path, <span class="pl-k">in</span> SDF format
+  --template-ligand TEXT   template ligand file path, <span class="pl-k">in</span> SDF format
+  --help                   Show this message and <span class="pl-c1">exit</span>.</pre></div>
         </article>
       </div>
     </div>
