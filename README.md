@@ -1,26 +1,26 @@
 - [eXtended Contact Mode Score](#sec-1)
-- [Installation Dependencies](#sec-2)
-  - [Python 2.7 and pip](#sec-2-1)
-  - [OpenBabel and Pybel](#sec-2-2)
-  - [Pkcombu](#sec-2-3)
-  - [APoc](#sec-2-4)
-- [Installation](#sec-3)
-- [Usage](#sec-4)
+  - [Installation Dependencies](#sec-1-1)
+    - [Python 2.7 and pip](#sec-1-1-1)
+    - [OpenBabel and Pybel](#sec-1-1-2)
+    - [Pkcombu](#sec-1-1-3)
+    - [APoc](#sec-1-1-4)
+  - [Installation](#sec-1-2)
+  - [Usage](#sec-1-3)
 
-# eXtended Contact Mode Score<a id="orgheadline1"></a>
+# eXtended Contact Mode Score<a id="orgheadline8"></a>
 
 Compare two protein-ligand binding conformations even when they are
 non-identical systems using **eXtended Contact Mode Score (XCMS)**
 
-# Installation Dependencies<a id="orgheadline6"></a>
+## Installation Dependencies<a id="orgheadline5"></a>
 
-## Python 2.7 and pip<a id="orgheadline2"></a>
+### Python 2.7 and pip<a id="orgheadline1"></a>
 
 It is recommended to install [Anaconda](https://www.continuum.io/downloads) on your system to set up the python
 working environment, which provides most of the python dependencies to run XCMS,
 except for Pybel, whose installation shall be explained below.
 
-## OpenBabel and Pybel<a id="orgheadline3"></a>
+### OpenBabel and Pybel<a id="orgheadline2"></a>
 
 We use [OpenBabel](http://openbabel.org/wiki/Main_Page) and its python binding [pybel](https://openbabel.org/docs/dev/UseTheLibrary/Python_Pybel.html) to handle various input formats.
 
@@ -29,7 +29,7 @@ python binding.
 
 Be aware, you must use the old [Eigen2 ](http://eigen.tuxfamily.org/index.php?title=Eigen2)instead of Eigen3.
 
-## Pkcombu<a id="orgheadline4"></a>
+### Pkcombu<a id="orgheadline3"></a>
 
 We use [pkcombu](http://strcomp.protein.osaka-u.ac.jp/kcombu/doc/README_pkcombu.html) in the KCOMBU package to compare two ligands.
 
@@ -37,7 +37,7 @@ You may download the KCOMBU program [here](http://strcomp.protein.osaka-u.ac.jp/
 
 Please add the `pkcombu` into your system's `PATH` variable.
 
-## APoc<a id="orgheadline5"></a>
+### APoc<a id="orgheadline4"></a>
 
 We use Apoc to compare two binding pockets.
 
@@ -45,7 +45,7 @@ You may donwload Apoc program [here](http://cssb.biology.gatech.edu/APoc).
 
 Please add the `apoc` into your system's `PATH` variable.
 
-# Installation<a id="orgheadline7"></a>
+## Installation<a id="orgheadline6"></a>
 
 At the command line:
 
@@ -59,7 +59,7 @@ To install locally only for yourself:
 $ pip install xcms --user
 ```
 
-# Usage<a id="orgheadline8"></a>
+## Usage<a id="orgheadline7"></a>
 
 To use it:
 
